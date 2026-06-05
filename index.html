@@ -170,20 +170,6 @@
                 <span>HOST: KAUSHAL_SECURE</span>
             </div>
 
-            <!-- Interceptor Prompt to bypass audio restriction and trigger write sequences -->
-            <div id="boot-prompt" class="absolute inset-0 bg-black/95 flex flex-col items-center justify-center text-center p-4 cursor-pointer hover:bg-black/90 transition-colors z-[10000]">
-                <div class="text-emerald-400 mb-6 animate-pulse">
-                    <i class="fas fa-shield-halved text-6xl mb-4"></i>
-                </div>
-                <h3 class="text-lg font-bold text-emerald-400 tracking-widest mb-2 uppercase">DECRYPTION ENGINE STANDBY</h3>
-                <p class="text-xs text-emerald-500/80 max-w-md leading-relaxed mb-6">
-                    Authentication keys prepared for <b class="text-emerald-300">Kaushal Kumar Baitha</b>. Tap the trigger node below to authorize sound matrix & begin decryption diagnostics.
-                </p>
-                <button onclick="startBootSequence()" class="px-6 py-2.5 border border-emerald-500 bg-emerald-950/50 text-emerald-400 font-bold hover:bg-emerald-500 hover:text-black rounded transition-all shadow-neon-green tracking-widest uppercase text-xs">
-                    Authorize & Run Diagnostics
-                </button>
-            </div>
-
             <!-- Diagnostic Lines Output Frame -->
             <div id="boot-log" class="space-y-2 h-64 overflow-y-auto mb-4 text-xs text-emerald-300 pr-2">
                 <!-- Typed lines will appear here dynamically -->
@@ -800,25 +786,46 @@
         const logElement = document.getElementById('boot-log');
 
         function startBootSequence() {
-            // Unlock audio
-            initAudio();
-            isAudioOn = true;
+            // Unlocked if possible, browser may suspend it initially
+            try {
+                initAudio();
+                if (audioCtx && audioCtx.state !== 'suspended') {
+                    isAudioOn = true;
+                    updateAudioStatusUI();
+                }
+            } catch (err) {
+                console.log("Audio autoplay restricted. Waiting for first interaction gesture.");
+            }
+
+            // Start typing lines immediately
+            typeNextBootLine();
+        }
+
+        function updateAudioStatusUI() {
             const btn = document.getElementById('audio-toggle-btn');
             const icon = document.getElementById('audio-icon');
             const statusText = document.getElementById('audio-status-text');
-            icon.className = "fas fa-volume-up text-emerald-400";
-            statusText.innerText = "AUDIO ON";
-            btn.classList.add('bg-emerald-500/10', 'border-emerald-500');
-
-            // Hide the interceptor authorization prompt
-            document.getElementById('boot-prompt').classList.add('hidden');
-            
-            playSynthBeep(880, 0.2, 'sine');
-            setTimeout(() => playSynthBeep(1200, 0.3, 'sine'), 150);
-
-            // Start typing lines
-            typeNextBootLine();
+            if (isAudioOn) {
+                icon.className = "fas fa-volume-up text-emerald-400";
+                statusText.innerText = "AUDIO ON";
+                btn.classList.add('bg-emerald-500/10', 'border-emerald-500');
+            } else {
+                icon.className = "fas fa-volume-mute";
+                statusText.innerText = "AUDIO OFF";
+                btn.classList.remove('bg-emerald-500/10', 'border-emerald-500');
+            }
         }
+
+        // Setup a document-wide listener to smoothly unlock Audio Context on first interactive click
+        document.addEventListener('click', function() {
+            if (audioCtx && audioCtx.state === 'suspended') {
+                audioCtx.resume().then(() => {
+                    isAudioOn = true;
+                    updateAudioStatusUI();
+                    playSynthBeep(600, 0.1, 'triangle');
+                });
+            }
+        }, { once: true });
 
         function typeNextBootLine() {
             if (bootIndex < bootLogData.length) {
@@ -1471,6 +1478,7 @@
         window.onload = function() {
             updateSignalBars();
             initializeHackPuzzle();
+            startBootSequence(); // Start typewriter diagnostic process immediately on window load
         }
     </script>
 </body>

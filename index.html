@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaushal Kumar Baitha | Cyber Security & Software Dev Terminal</title>
+    <title>Kaushal Kumar Baitha | EETIRP Founder & System Dev Terminal</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons for HUD and Terminal aesthetics -->
@@ -208,15 +208,15 @@
         <div class="flex items-center gap-3">
             <div class="flex items-center gap-1">
                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse inline-block"></span>
-                <span class="font-bold tracking-widest text-emerald-400 terminal-glow-green">SECURE HOSTNAME: KAUSHAL-BAITHA_SYS_v2.6.4</span>
+                <span class="font-bold tracking-widest text-emerald-400 terminal-glow-green">SECURE HOSTNAME: KAUSHAL_EETIRP_SYS_v2.6.4</span>
             </div>
             <div class="hidden sm:flex items-center gap-1.5 border-l border-emerald-500/20 pl-3 text-emerald-500/70">
-                <i class="fas fa-network-wired"></i>
-                <span>PORT: 8080 (HTTPS)</span>
+                <i class="fas fa-building-columns"></i>
+                <span>COMPANY: EETIRP LTD (FOUNDER)</span>
             </div>
             <div class="hidden md:flex items-center gap-1.5 border-l border-emerald-500/20 pl-3 text-emerald-500/70">
                 <i class="fas fa-microchip"></i>
-                <span>CPU: ACTIVE 8.41 CGPA</span>
+                <span>CGPA: 8.41</span>
             </div>
         </div>
 
@@ -255,14 +255,18 @@
 
             <!-- Profile Info Scroll Container -->
             <div class="flex-1 overflow-y-auto p-4 space-y-4 text-xs">
-                <!-- Retro Avatar -->
-                <div class="relative w-32 h-32 mx-auto border-2 border-emerald-500/30 rounded-xl overflow-hidden group bg-emerald-950/20 flex items-center justify-center shadow-neon-green">
-                    <svg class="w-20 h-20 text-emerald-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                    </svg>
-                    <!-- Matrix overlay on image area -->
-                    <div class="absolute inset-0 bg-emerald-500/5 group-hover:bg-emerald-500/10 transition-colors"></div>
-                    <div class="absolute bottom-1 inset-x-0 text-center text-[10px] bg-black/80 py-0.5 border-t border-emerald-500/20 font-bold tracking-widest text-emerald-400">
+                <!-- Retro Avatar with Live Image Integration -->
+                <div class="relative w-36 h-44 mx-auto border-2 border-emerald-500/30 rounded-xl overflow-hidden group bg-emerald-950/20 flex items-center justify-center shadow-neon-green">
+                    <!-- High-fidelity custom photograph integrated with fallback loading safeguards -->
+                    <img id="profile-picture" 
+                         src="WhatsApp Image 2026-06-05 at 12.22.10 PM.jpeg" 
+                         alt="Kaushal Kumar Baitha" 
+                         class="w-full h-full object-cover filter contrast-[1.15] brightness-[0.85] grayscale group-hover:grayscale-0 group-hover:brightness-100 group-hover:contrast-100 transition-all duration-500" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/150x150/10b981/000000?text=Kaushal';">
+                    
+                    <!-- Color theme overlay mask that responds dynamically on theme changes -->
+                    <div id="photo-overlay-tint" class="absolute inset-0 bg-emerald-500/10 group-hover:bg-transparent transition-all pointer-events-none mix-blend-color"></div>
+                    <div class="absolute bottom-1 inset-x-0 text-center text-[10px] bg-black/85 py-0.5 border-t border-emerald-500/20 font-bold tracking-widest text-emerald-400 z-10">
                         KAUSHAL K.B.
                     </div>
                 </div>
@@ -271,12 +275,13 @@
                 <div class="space-y-2">
                     <div class="p-2.5 rounded border border-emerald-500/10 bg-emerald-950/10 hover:border-emerald-500/30 transition-all">
                         <div class="text-[10px] text-emerald-500/50">PRIMARY ROLE</div>
-                        <div class="font-bold text-emerald-300">Computer Science Specialist</div>
+                        <div class="font-bold text-emerald-300">Founder &amp; Full Stack Developer</div>
+                        <div class="text-emerald-500/70 text-[10px]">EETIRP LTD</div>
                     </div>
                     <div class="p-2.5 rounded border border-emerald-500/10 bg-emerald-950/10 hover:border-emerald-500/30 transition-all">
-                        <div class="text-[10px] text-emerald-500/50">CURRENT PURSUIT</div>
+                        <div class="text-[10px] text-emerald-500/50">ACADEMIC PARADIGM</div>
                         <div class="font-bold text-emerald-300">Sapthagiri NPS University</div>
-                        <div class="text-emerald-500/70 text-[10px]">CGPA: 8.41 (2025 - Present)</div>
+                        <div class="text-emerald-500/70 text-[10px]">Computer Science (CGPA: 8.41)</div>
                     </div>
                     <div class="p-2.5 rounded border border-emerald-500/10 bg-emerald-950/10 hover:border-emerald-500/30 transition-all">
                         <div class="text-[10px] text-emerald-500/50">CURRENT ENCRYPTION KEY (EMAIL)</div>
@@ -299,8 +304,8 @@
                 <!-- Live Network Signal Visualizer -->
                 <div class="pt-2 border-t border-emerald-500/10">
                     <div class="flex items-center justify-between text-[10px] text-emerald-500/60 mb-2">
-                        <span>NETWORK BEACON</span>
-                        <span class="animate-pulse text-emerald-400">● LIVE FEED</span>
+                        <span>EETIRP BEACON FEED</span>
+                        <span class="animate-pulse text-emerald-400">● LIVE</span>
                     </div>
                     <div class="h-10 flex items-end gap-1 overflow-hidden" id="signal-bars">
                         <!-- Instantiated by JS -->
@@ -323,7 +328,7 @@
                 <!-- TERMINAL GREETING / SUMMARY WIDGET -->
                 <div class="border border-emerald-500/20 bg-black/75 backdrop-blur-md rounded-lg p-4 relative overflow-hidden shrink-0">
                     <div class="absolute right-4 top-4 text-emerald-500/10 pointer-events-none">
-                        <i class="fas fa-terminal text-8xl"></i>
+                        <i class="fas fa-building-shield text-8xl"></i>
                     </div>
                     <div class="flex items-center gap-2 mb-2 text-xs font-bold text-emerald-500/60 uppercase tracking-widest">
                         <i class="fas fa-shield-halved"></i> 
@@ -333,7 +338,7 @@
                         KAUSHAL KUMAR BAITHA
                     </h1>
                     <p class="text-xs md:text-sm text-emerald-300 max-w-3xl leading-relaxed">
-                        Results-driven and detail-oriented Computer Science and Engineering graduate seeking an entry-level position to kickstart a career in software development or IT solutions. Possessing a deep architectural foundation in system dynamics, programming pipelines, and automated cloud systems.
+                        **Founder &amp; Full Stack Developer at EETIRP LTD**—a next-generation technology, innovation, and student AI ecosystem. Computer Science and Engineering specialist combining engineering leadership with robust analytical capacities. Backed by solid foundations in modern software pipelines, microservice deployment, and architecture validated in <span class="text-emerald-400 font-bold select-all">"5_6111493846640632602.pdf"</span>.
                     </p>
                     <div class="mt-4 flex flex-wrap gap-2 text-xs">
                         <a href="https://github.com/kaushalbaitha7" target="_blank" class="px-3 py-1.5 rounded border border-emerald-500/30 bg-emerald-950/20 hover:bg-emerald-500 hover:text-black hover:scale-105 transition-all flex items-center gap-1.5 font-bold">
@@ -348,7 +353,7 @@
                     </div>
                 </div>
 
-                <!-- CORE SKILLS METRICS (RADAR GRAPH & METRIC CARDS) -->
+                <!-- CORE SKILLS METRICS -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <!-- Tech Skills -->
                     <div class="md:col-span-2 border border-emerald-500/20 bg-black/75 backdrop-blur-md rounded-lg p-4 flex flex-col justify-between">
@@ -442,25 +447,28 @@
                             <!-- Timeline node -->
                             <div class="relative pl-4 border-l-2 border-emerald-500/30 space-y-4">
                                 <div class="relative">
-                                    <div class="absolute -left-[21px] top-1 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-black"></div>
-                                    <div class="text-[10px] text-emerald-400 font-bold">MAY 2025 - JAN 2026</div>
-                                    <h4 class="font-bold text-emerald-200 text-xs">Intern System Engineer</h4>
-                                    <p class="text-[11px] text-emerald-500/80">Coders Arcade</p>
+                                    <div class="absolute -left-[21px] top-1 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-black animate-pulse"></div>
+                                    <div class="text-[10px] text-emerald-400 font-bold">AUG 2025 - PRESENT</div>
+                                    <h4 class="font-bold text-emerald-200 text-xs">Founder &amp; Full Stack Developer</h4>
+                                    <p class="text-[11px] text-emerald-500/80">EETIRP LTD</p>
                                     <p class="text-[10px] text-emerald-300 mt-1 leading-relaxed">
-                                        Contributing developer to high-capacity student systems including NEET Counselling & Admission Management infrastructures.
+                                        Launched and architected a comprehensive student digital ecosystem, directing AI career roadmaps, tools development, and systems design.
                                     </p>
                                 </div>
                                 <div class="relative">
                                     <div class="absolute -left-[21px] top-1 w-2.5 h-2.5 rounded-full bg-emerald-500/40 border-2 border-black"></div>
-                                    <div class="text-[10px] text-emerald-500/60 font-bold">AUG 2025 - PRESENT</div>
-                                    <h4 class="font-bold text-emerald-300/80 text-xs">Active CS Matriculation</h4>
-                                    <p class="text-[11px] text-emerald-500/60">Sapthagiri NPS University</p>
+                                    <div class="text-[10px] text-emerald-500/60 font-bold">MAY 2025 - JAN 2026</div>
+                                    <h4 class="font-bold text-emerald-300/80 text-xs">Intern System Engineer</h4>
+                                    <p class="text-[11px] text-emerald-500/60">Coders Arcade</p>
+                                    <p class="text-[10px] text-emerald-300 mt-1 leading-relaxed">
+                                        Contributed directly to admissions, candidate verifications, and counselling processing databases.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mt-4 pt-3 border-t border-emerald-500/10 flex items-center justify-between text-[11px] text-emerald-500/50">
-                            <span>TOTAL NODES: 2</span>
+                            <span>VENTURES: 1 ACTIVE</span>
                             <span>SYS_INTEGRITY: 100%</span>
                         </div>
                     </div>
@@ -471,7 +479,7 @@
                     <div class="flex items-center justify-between mb-4 pb-2 border-b border-emerald-500/10">
                         <div class="flex items-center gap-2">
                             <i class="fas fa-folder-open text-emerald-400"></i>
-                            <span class="text-xs font-bold uppercase tracking-wider">SECURE_PROJECT_ARCHIVES.VOL (4 ACTIVE NODES)</span>
+                            <span class="text-xs font-bold uppercase tracking-wider">EETIRP_PROJECT_ARCHIVES.VOL (4 ACTIVE NODES)</span>
                         </div>
                         <span class="text-[10px] text-emerald-500/60">CLICK EACH NODE TO ACTIVATE DIRECT DECRYPTION</span>
                     </div>
@@ -487,7 +495,7 @@
                                     <span class="text-[9px] px-1.5 py-0.5 rounded border border-emerald-500/20 bg-emerald-950/40 text-emerald-400">PWA / FIREBASE</span>
                                 </div>
                                 <p class="text-[11px] text-emerald-300/80 leading-relaxed mb-3">
-                                    Mobile-responsive learning environment utilizing Offline service workers, offline modules, and cloud administration.
+                                    Mobile-responsive learning environment utilizing offline service workers, offline modules, and cloud administration.
                                 </p>
                             </div>
                             <div class="flex items-center justify-between text-[10px] text-emerald-500/60">
@@ -501,10 +509,10 @@
                             <div>
                                 <div class="flex justify-between items-start mb-2">
                                     <h3 class="font-bold text-emerald-300 group-hover:text-emerald-400 transition-colors text-sm">KAURA - Digital Ecosystem</h3>
-                                    <span class="text-[9px] px-1.5 py-0.5 rounded border border-emerald-500/20 bg-emerald-950/40 text-emerald-400">RESPONSIVE WEB</span>
+                                    <span class="text-[9px] px-1.5 py-0.5 rounded border border-emerald-500/20 bg-emerald-950/40 text-emerald-400">EETIRP LTD PLATFORM</span>
                                 </div>
                                 <p class="text-[11px] text-emerald-300/80 leading-relaxed mb-3">
-                                    Student-centric ecosystem integrating AI Career Mentor, Resume Builder, Placement HUD, and Smart Timetables.
+                                    Centralized student-centric ecosystem featuring resume builders, smart timetables, AI career mentors, and aptitude suites.
                                 </p>
                             </div>
                             <div class="flex items-center justify-between text-[10px] text-emerald-500/60">
@@ -558,7 +566,7 @@
                 <div class="px-4 py-2 bg-emerald-950/40 border-b border-emerald-500/20 flex items-center justify-between text-xs text-emerald-400">
                     <div class="flex items-center gap-2">
                         <i class="fas fa-terminal"></i>
-                        <span>SYSTEM SHELL: kaushal@system:~#</span>
+                        <span>SYSTEM SHELL: kaushal@eetirp:~#</span>
                     </div>
                     <div class="flex gap-1.5">
                         <span class="w-2.5 h-2.5 rounded-full bg-red-500/60"></span>
@@ -569,8 +577,8 @@
 
                 <!-- CLI Terminal Output Buffer -->
                 <div id="terminal-output" class="flex-1 p-4 overflow-y-auto space-y-2 text-xs md:text-sm text-emerald-300 font-mono scroll-smooth selection:bg-emerald-800 selection:text-white">
-                    <div>Welcome to KAUSHAL_OS [Version 2.6.4]</div>
-                    <div>(c) 2026 Kaushal Kumar Baitha. Secure Linkage active.</div>
+                    <div>Welcome to KAUSHAL_EETIRP_OS [Version 2.6.4]</div>
+                    <div>(c) 2026 Kaushal Kumar Baitha. EETIRP LTD Secure Linkage Active. Verified by "5_6111493846640632602.pdf".</div>
                     <br>
                     <div>Type <span class="text-emerald-400 font-bold underline cursor-pointer" onclick="executeTermCommand('help')">help</span> to explore available commands (e.g., projects, skills, about, hack, socials).</div>
                     <br>
@@ -589,7 +597,7 @@
 
                 <!-- Input prompt line -->
                 <div class="p-3 bg-black border-t border-emerald-500/20 flex items-center gap-2 text-xs md:text-sm shrink-0">
-                    <span class="text-emerald-400 font-bold">kaushal@system:~#</span>
+                    <span class="text-emerald-400 font-bold">kaushal@eetirp:~#</span>
                     <input type="text" id="terminal-input-el" class="flex-1 bg-transparent text-emerald-300 outline-none border-none font-mono focus:ring-0 placeholder-emerald-500/40" placeholder="Enter shell command..." autofocus autocomplete="off">
                 </div>
             </div>
@@ -614,7 +622,7 @@
                         FIREWALL ACCESS BYPASS
                     </div>
                     <p class="text-[11px] text-emerald-500/80 mb-4 leading-relaxed text-center">
-                        Secure connection requested. Activate the matching system nodes of the same index color in minimum steps to bypass.
+                        Secure connection requested. Activate matching system nodes of the same index color in minimum steps to bypass firewall filters.
                     </p>
 
                     <!-- Game Matrix Screen -->
@@ -764,29 +772,30 @@
     <!-- SECURE TYPEWRITING BOOT SEQUENCER -->
     <script>
         const bootLogData = [
-            { text: "CRITICAL BOOT LOAD STARTING...", speed: 300 },
-            { text: "ESTABLISHING NEURAL LINK TO PORTFOLIO SERVER... SUCCESS", speed: 500 },
-            { text: "INITIALIZING RETRO CODES DECRYPT MODULES...", speed: 400 },
-            { text: "CHECKING SYSTEM CREDENTIAL MODULES...", speed: 300 },
-            { text: " > CADET PROFILE: KAUSHAL KUMAR BAITHA", speed: 400 },
-            { text: " > RECONSTRUCTING EDUCATIONAL PARADIGMS...", speed: 300 },
-            { text: "   [OK] SAPTHAGIRI NPS UNIVERSITY DETECTED", speed: 200 },
-            { text: "   [OK] ACADEMIC TARGET STATE: 8.41 CGPA", speed: 200 },
-            { text: " > PARSING CORE REPOSITORIES:", speed: 300 },
-            { text: "   [OK] VERTHINK - AI-POWERED STUDENT HUB (PWA/Firebase)", speed: 150 },
-            { text: "   [OK] KAURA - ECOSYSTEM DASHBOARD (Responsive Modular UI)", speed: 150 },
-            { text: "   [OK] PLACEMENT AI PLATFORM (React/Node/Express/MongoDB)", speed: 150 },
-            { text: "   [OK] GYANGURU - ADMISSION PIPELINE (MongoDB/REST Handlers)", speed: 150 },
-            { text: " > VERIFYING WORKSPACE ENCRYPTED CHRONOLOGY...", speed: 400 },
-            { text: "   [OK] INTERN SYSTEM ENGINEER - CODERS ARCADE SYSTEM", speed: 250 },
-            { text: "DEPLOYING DATA CHANNELS..." , speed: 600 }
+            { text: "CRITICAL BOOT LOAD STARTING...", speed: 200 },
+            { text: "ESTABLISHING SECURE CONNECTION TO EETIRP LTD CORE HOUSING... SUCCESS", speed: 350 },
+            { text: "VERIFYING ENCRYPTED CREDENTIAL MATRIX '5_6111493846640632602.pdf' ... SUCCESS", speed: 400 },
+            { text: "INITIALIZING RETRO CODES DECRYPT MODULES...", speed: 200 },
+            { text: " > CADET PROFILE: KAUSHAL KUMAR BAITHA", speed: 300 },
+            { text: " > FOUNDING PROTOCOLS: ACTIVE (EETIRP LTD FOUNDED)", speed: 400 },
+            { text: " > RECONSTRUCTING EDUCATIONAL PARADIGMS...", speed: 200 },
+            { text: "   [OK] SAPTHAGIRI NPS UNIVERSITY (COMPUTER SCIENCE)", speed: 150 },
+            { text: "   [OK] ACADEMIC TARGET STATE: 8.41 CGPA", speed: 150 },
+            { text: " > PARSING EETIRP DIGITAL ASSETS ARCHIVE:", speed: 200 },
+            { text: "   [OK] VERTHINK - STUDENT LEARNING PWA (Firebase Realtime)", speed: 100 },
+            { text: "   [OK] KAURA - STUDENT DIGITAL ECOSYSTEM (EETIRP Subsidiary)", speed: 100 },
+            { text: "   [OK] PLACEMENT AI PLATFORM - AI MOCK RECRUITMENT NODES", speed: 100 },
+            { text: "   [OK] GYANGURU - NEET ADMISSIONS PIPELINE (Render Deploy)", speed: 100 },
+            { text: " > VERIFYING WORKSPACE CHRONOLOGY...", speed: 300 },
+            { text: "   [OK] FOUNDER & FULL STACK DEVELOPER - EETIRP LTD", speed: 200 },
+            { text: "   [OK] SYSTEM ENGINEERING INTERN - CODERS ARCADE", speed: 200 },
+            { text: "DEPLOYING DATA CHANNELS..." , speed: 400 }
         ];
 
         let bootIndex = 0;
         const logElement = document.getElementById('boot-log');
 
         function startBootSequence() {
-            // Unlocked if possible, browser may suspend it initially
             try {
                 initAudio();
                 if (audioCtx && audioCtx.state !== 'suspended') {
@@ -794,10 +803,8 @@
                     updateAudioStatusUI();
                 }
             } catch (err) {
-                console.log("Audio autoplay restricted. Waiting for first interaction gesture.");
+                console.log("Audio autoplay restricted. Waiting for interaction.");
             }
-
-            // Start typing lines immediately
             typeNextBootLine();
         }
 
@@ -816,7 +823,6 @@
             }
         }
 
-        // Setup a document-wide listener to smoothly unlock Audio Context on first interactive click
         document.addEventListener('click', function() {
             if (audioCtx && audioCtx.state === 'suspended') {
                 audioCtx.resume().then(() => {
@@ -841,7 +847,7 @@
                         row.textContent += line.text[charIndex];
                         charIndex++;
                         playTypewriterSound();
-                        setTimeout(writeChar, 10 + Math.random() * 20);
+                        setTimeout(writeChar, 10 + Math.random() * 15);
                     } else {
                         bootIndex++;
                         setTimeout(typeNextBootLine, line.speed);
@@ -849,7 +855,6 @@
                 }
                 writeChar();
             } else {
-                // Done typing log files. Reveal decryption word matrix.
                 setTimeout(revealDecryptionSection, 500);
             }
         }
@@ -873,7 +878,6 @@
                 progressBar.style.width = `${progress}%`;
                 playSynthBeep(300 + (tick * 40), 0.05, 'triangle', 0.06);
 
-                // Scramble the letters
                 let result = "";
                 for (let i = 0; i < targetName.length; i++) {
                     if (targetName[i] === " ") {
@@ -891,7 +895,6 @@
                     scrambledEl.textContent = targetName;
                     playSynthBeep(1000, 0.4, 'sine', 0.15);
                     
-                    // Polish with a screen flash & drop overlay
                     setTimeout(() => {
                         const overlay = document.getElementById('boot-overlay');
                         overlay.classList.add('opacity-0', 'scale-105');
@@ -1028,33 +1031,33 @@
                 subtitle: "Advanced Hybrid Progressive Web Application",
                 tech: ["HTML5", "CSS3", "JavaScript ES6", "Firebase Realtime DB", "JSON Configs", "PWA Architecture", "Service Workers"],
                 desc: [
-                    "Engineered a fully mobile-responsive application integrating offline-first core models to assist remote users during connection dropouts.",
-                    "Configured background push notifications and caching frameworks via service worker protocols, lowering first-load latency by 45%.",
-                    "Integrated comprehensive content panel controls for instant curation of micro-learning assets, soft-skill matrices, and career routing maps."
+                    "Engineered a fully mobile-responsive Progressive Web Application delivering learning resources, soft-skill matrices, motivational hubs, and career paths.",
+                    "Configured background push notifications and caching frameworks via service worker protocols, lowering load latency while allowing offline-first content accessibility.",
+                    "Integrated comprehensive content panel controls for instant curation of digital materials, streamlining student routing maps."
                 ],
                 role: "Lead Full-Stack PWA Architect",
                 status: "Operational / Fully Integrated"
             },
             kaura: {
                 title: "KAURA - Student Digital Ecosystem Platform",
-                subtitle: "Unified Central Student Hub & Modular Dashboard",
-                tech: ["HTML5 / CSS3", "JavaScript", "GitHub Hub Control", "Vercel Cloud", "Responsive Modular Des.", "AI Careers Pipeline"],
+                subtitle: "Unified Central Student Hub under EETIRP LTD",
+                tech: ["HTML5 / CSS3", "JavaScript", "GitHub Integration", "Vercel Cloud", "Responsive UI/UX Des.", "AI Careers Pipeline"],
                 desc: [
-                    "Formulated a highly scalable web interface combining Placement Preparation modules, Aptitude HUDs, Coding Sandboxes, and Semester Hub notes.",
-                    "Conceptualized dynamic AI Career Mentorship pathways inside a unified interface dashboard, reducing user bounce rates across different student tools.",
-                    "Structured decoupled navigation architectures facilitating zero-latency navigation between micro-frontends and external resource APIs."
+                    "Formulated and launched the flagship digital student-centric ecosystem under EETIRP LTD, unifying scholastic utilities and performance tools.",
+                    "Built responsive widgets including Resume Builder, Placement Preparation frameworks, Semester Notes Hub, Smart Timetables, Aptitude Training suites, and a robust AI Career Mentor module.",
+                    "Structured decoupled modular navigation architecture supporting future iterations of AI coordination, authorization systems, and cloud DB models."
                 ],
-                role: "Core Platform Architect",
-                status: "Operational / Micro-Frontends Online"
+                role: "Founder & Core Platform Architect",
+                status: "Operational / Core Hub Online"
             },
             placement: {
                 title: "Placement AI Platform - Placement Prep System",
                 subtitle: "AI Career Prep Machine",
                 tech: ["React.js", "Node.js", "Express.js", "MongoDB", "RESTful Routing", "Railway Deploy Engine", "Vercel Edge Pipelines"],
                 desc: [
-                    "Built secure end-to-end API infrastructures enabling low-latency real-time AI Mock Interviews and mock performance evaluations.",
-                    "Deployed cloud database schemas inside MongoDB Atlas utilizing relational modeling to map student scores across diverse technical focus fields.",
-                    "Created robust, responsive component architectures with advanced mock-testing telemetry metrics to ensure highly-fluid mobile optimization."
+                    "Built secure end-to-end API infrastructures enabling real-time adaptive AI Mock Interviews, resumes intelligence analysis, and simulated performance metrics tracking.",
+                    "Deployed cloud database schemas inside MongoDB Atlas utilizing secure modeling to keep student test data precisely tabulated across various domains.",
+                    "Created robust, responsive component architectures with advanced mock-testing telemetry metrics to ensure fluid mobile viewport optimization."
                 ],
                 role: "MERN Stack Engineer",
                 status: "Live Production Deployment"
@@ -1064,11 +1067,11 @@
                 subtitle: "Automated Verification & Counselling Pipeline",
                 tech: ["React.js", "Node.js Core", "Express.js", "MongoDB", "REST Handlers", "Vercel Front", "Render Service Backend"],
                 desc: [
-                    "Coded full-scale candidate registration pipelines, mapping multiple complex file criteria including profile states, bank transfers, and verification queues.",
-                    "Integrated optimized queries inside MongoDB Atlas resulting in stable transactions and precise indexing during heavy counselling windows.",
+                    "Coded full-scale candidate registration pipelines, mapping candidate records including profile states, verification pipelines, bank details, and counselling queues.",
+                    "Integrated optimized queries inside MongoDB Atlas resulting in stable transactions and precise indexing during heavy admission traffic windows.",
                     "Standardized response models across all backend routes, integrating secure JWT handshakes and strict request body validations."
                 ],
-                role: "Backend & Systems Integration Specialist",
+                role: "Backend & Systems Integration Specialist (Coders Arcade)",
                 status: "Stable / Legacy Framework"
             }
         };
@@ -1178,20 +1181,32 @@
 
             let themeColor = '#10b981'; // Default
             let themeClass = 'green';
+            const photoTint = document.getElementById('photo-overlay-tint');
 
             if (themeName === 'cyan') {
                 themeColor = '#06b6d4';
                 themeClass = 'cyan';
                 document.documentElement.className = "h-full bg-black select-none text-cyan-400 font-mono";
                 updateGlowTheme('blue');
+                if(photoTint) {
+                    photoTint.className = "absolute inset-0 bg-cyan-500/15 group-hover:bg-transparent transition-all pointer-events-none mix-blend-color";
+                }
             } else if (themeName === 'pink') {
                 themeColor = '#ec4899';
                 themeClass = 'pink';
                 document.documentElement.className = "h-full bg-black select-none text-pink-400 font-mono";
                 updateGlowTheme('pink');
+                if(photoTint) {
+                    photoTint.className = "absolute inset-0 bg-pink-500/15 group-hover:bg-transparent transition-all pointer-events-none mix-blend-color";
+                }
             } else {
+                themeColor = '#10b981';
+                themeClass = 'green';
                 document.documentElement.className = "h-full bg-black select-none text-green-400 font-mono";
                 updateGlowTheme('green');
+                if(photoTint) {
+                    photoTint.className = "absolute inset-0 bg-emerald-500/10 group-hover:bg-transparent transition-all pointer-events-none mix-blend-color";
+                }
             }
 
             activeColor = themeColor;
@@ -1251,7 +1266,7 @@
             const cmd = parts[0];
             const arg = parts.slice(1).join(' ');
 
-            printToTerminal(`kaushal@system:~# ${cmdLine}`);
+            printToTerminal(`kaushal@eetirp:~# ${cmdLine}`);
 
             switch(cmd) {
                 case 'help':
@@ -1271,24 +1286,25 @@
                     break;
 
                 case 'about':
-                    printToTerminal(`[SYSTEM DISCLOSURE DETECTED]`);
+                    printToTerminal(`[SYSTEM DISCLOSURE: EETIRP FOUNDER STATE]`);
                     printToTerminal(`Name: Kaushal Kumar Baitha`);
-                    printToTerminal(`Role: Software Engineer / System Architecture Specialist`);
+                    printToTerminal(`Title: Founder & Full Stack Architect @ EETIRP LTD`);
                     printToTerminal(`Education: Sapthagiri NPS University (August 2025 - Pursuing)`);
-                    printToTerminal(`Base Location: Chikkabanavara, Bengaluru - 560090`);
-                    printToTerminal(`Summary: Highly adaptive and metrics-driven CS professional, experienced in developing and containerizing dynamic client web networks.`);
+                    printToTerminal(`Credential Code: "5_6111493846640632602.pdf" verified.`);
+                    printToTerminal(`Location Coordinates: Chikkabanavara, Bengaluru - 560090`);
+                    printToTerminal(`Profile Summary: Leading development cycles for high-impact educational frameworks, AI platforms, and microservice pipelines under the EETIRP LTD banner.`);
                     break;
 
                 case 'skills':
                     printToTerminal(`--- ACQUIRED SKILLSETS GRAPH MATRIX ---`);
-                    printToTerminal(`Languages: Java (85%), C Core (80%), JavaScript/ES6 (90%)`);
-                    printToTerminal(`Development Frameworks: React.js, Express.js, Node.js, HTML/CSS/Bootstrap`);
-                    printToTerminal(`Analytics & Systems: MongoDB, Firebase PWA Architectures, OOP Optimization`);
-                    printToTerminal(`System Tools: VS Code, Git CLI, PyCharm, IntelliJ, Eclipse`);
+                    printToTerminal(`Languages: Java, C, JavaScript/ES6, MongoDB`);
+                    printToTerminal(`Development Stack: React.js, Express.js, Node.js, HTML5, CSS3, Bootstrap`);
+                    printToTerminal(`Methodologies: DSA optimization, PWA Service Workers, Cloud Integration`);
+                    printToTerminal(`IDEs & Workstations: VS Code, Git CLI, PyCharm, IntelliJ, Eclipse`);
                     break;
 
                 case 'projects':
-                    printToTerminal(`--- INDEXING SECURE ARCHIVES IN PARTITION [D:] ---`);
+                    printToTerminal(`--- INDEXING SECURE ARCHIVES IN EETIRP PARTITION ---`);
                     printToTerminal(`1. verthink   - VerThink Learning Platform (PWA / Firebase Service)`);
                     printToTerminal(`2. kaura      - KAURA Digital Student Ecosystem (Unified Framework)`);
                     printToTerminal(`3. placement  - Placement AI Platform (MERN Stack Platform)`);
@@ -1449,8 +1465,8 @@
                     clearInterval(progressInterval);
                     printToTerminal(`DECRYPTION COMPLETED!`);
                     printToTerminal(`Credentials bypassed! Secret database open.`);
-                    printToTerminal(`KAUSHAL EDUCATION STATE IS: Sapthagiri NPS (CGPA: 8.41)`);
-                    printToTerminal(`KAUSHAL SPECIAL SKILLS ARE: MERN Architecture, PWA Services`);
+                    printToTerminal(`EETIRP LTD: TECHNOLOGY, INNOVATION, AI, AND STUDENT ECOSYSTEMS.`);
+                    printToTerminal(`KAUSHAL SPECIAL SKILLS: Java, C, React.js, Node.js & MongoDB.`);
                     showToast("Emergency Bypass Successful!", "success");
                 }
             }, 150);
@@ -1478,7 +1494,7 @@
         window.onload = function() {
             updateSignalBars();
             initializeHackPuzzle();
-            startBootSequence(); // Start typewriter diagnostic process immediately on window load
+            startBootSequence();
         }
     </script>
 </body>
